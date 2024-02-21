@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Login </title>
+    <style>
+      body {
+        background-image: url('wall2.jpg');
+        background-size: cover;
+        font-family: 'Krona One', sans-serif; /* Apply 'Krona One' font */
+        margin: 0; /* Remove default body margin */
+        line-height: normal;
+      }
+      
+      h1 {
+        color: rgba(248, 247, 247, 0.92); /* Use the color from the first code */
+        text-align: center;
+        margin-top: 100px;
+        font-size: 70px; /* Adjust font size */
+        font-family: 'Krona One'; /* Apply 'Krona One' font */
+      }
+      
+      form {
+        margin: auto;
+        width: 738px; /* Adjust form width */
+        padding: 48px 20px 342px 62px; /* Adjust form padding */
+        /*background-color: #fff;*/
+        border-radius: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 33px 0px;
+      }
+      
+      label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #d959f6;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 610px; /* Adjust input width */
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      input[type="submit"] {
+        background-color: #FFFFFF;
+        color: rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 20px; /* Adjust border-radius */
+        padding: 20px 30px 21px 34px; /* Adjust padding */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 358px; /* Adjust max-width */
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #d959f6;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Login </h1>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <a href="Page2_1.html" style="align-items: center;">Have an Existing Account?</a>
+      <a href="/home" id="link" style="text-decoration: none;"><input type="submit" value="Log In"></a>
+    </form>
+    
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create Your Inventory</title>
+  <style>
+    body {
+      background-image: url("wall2.jpg");
+      font-family: 'Krona One', sans-serif; /* Apply 'Krona One' font */
+      color: rgba(217, 117, 252, 0.92); /* Use the color from the first code */
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      padding-top: 30px; /* Adjust padding-top */
+      margin: 0; /* Remove default body margin */
+      line-height: normal;
+    }
+
+    h1 {
+      font-size: 70px; /* Adjust font size */
+      margin-bottom: 10px; /* Adjust margin-bottom */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      letter-spacing: normal; /* Adjust letter-spacing */
+    }
+
+    .form-group {
+      margin-bottom: 10px; /* Adjust margin-bottom */
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 300px; /* Adjust width */
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 16px; /* Adjust font size */
+      margin-bottom: 5px; /* Adjust margin-bottom */
+    }
+
+    button {
+      display: inline-block;
+      padding: 15px 25px; /* Adjust padding */
+      border-radius: 20px; /* Adjust border-radius */
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      background-color: #000; /* Use the background color from the first code */
+      color: rgba(217, 117, 252, 0.92); /* Use the color from the first code */
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgba(217, 117, 252, 0.92); /* Use the color from the first code */
+      color: #000; /* Use the background color from the first code */
+      box-shadow: 0px 0px 10px rgba(217, 117, 252, 0.92); /* Use the shadow color from the first code */
+    }
+  </style>
+</head>
+
+<body>
+    <button
+          style="
+            cursor: pointer;
+            border: none;
+            padding: 20px 30px 21px 34px;
+            background-color: #000;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+          "
+          onclick="window.location.href='Page4.html'"
+        >
+          <div
+            style="
+              height: 71px;
+              width: 152px;
+              position: top;
+              border-radius: 20px;
+              background-color: #000;
+              display: none;
+            "
+          ></div>
+          <div
+            style="
+              position: right;
+              font-size: 24px;
+              font-family: Inder;
+              color: #fff;
+              text-align: left;
+              z-index: 1;
+            "
+          >
+            SIGN OUT
+          </div>
+        </button>
+  <h1>Create Your Inventory</h1>
+  
+  <form id="inputForm">
+    <div class="form-group">
+      <input type="text" name="input1" id="input1" required placeholder="Enter Product Name">
+    </div>
+    <div class="form-group">
+      <input type="number" name="input2" id="input2" required placeholder="Enter Quantity of Product">
+    </div>
+    <button type="button" onclick="addInputs()">Add</button>
+    <button type="button" onclick="Page5.html">Next</button>
+  </form>
+
+  <script>
+    function addInputs() {
+      // Clone the container div
+      var containerClone = document.createElement("div");
+      containerClone.className = "form-group";
+
+      // Clone the existing input fields
+      var input1Clone = document.getElementById("input1").cloneNode(true);
+      var input2Clone = document.getElementById("input2").cloneNode(true);
+
+      // Clear the values of cloned inputs
+      input1Clone.value = "";
+      input2Clone.value = "";
+
+      // Append the cloned inputs to the container div
+      containerClone.appendChild(input1Clone);
+      containerClone.appendChild(input2Clone);
+
+      // Append the container div to the form
+      document.getElementById("inputForm").appendChild(containerClone);
+    }
+  </script>
+</body>
+
+</html>
